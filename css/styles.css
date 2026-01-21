@@ -43,6 +43,7 @@
   --spacing-lg: 2rem;
   --spacing-xl: 3rem;
   --spacing-2xl: 4rem;
+  --spacing-3xl: 5rem;
 
   /* Typography */
   --font-family: 'Inter', 'Helvetica Neue', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -758,7 +759,7 @@ a:hover {
 
 /* ---------- Page Headers (Sub-pages) ---------- */
 .page-header {
-  padding-top: calc(var(--header-height) + var(--spacing-2xl));
+  padding-top: calc(var(--header-height) + var(--spacing-3xl));
   padding-bottom: var(--spacing-2xl);
   background-color: var(--navy-bg);
   color: var(--text-light);
@@ -817,7 +818,7 @@ a:hover {
 /* ---------- Page Header Badges ---------- */
 .page-header .badge {
   display: inline-block;
-  padding: 0.5rem 1.25rem;
+  padding: 0.5rem 1.5rem;
   font-size: var(--font-size-sm);
   font-weight: 600;
   text-transform: uppercase;
@@ -826,12 +827,12 @@ a:hover {
   margin-bottom: var(--spacing-md);
 }
 
-.badge-live {
+.page-header .badge.badge-live {
   background-color: var(--success-green);
   color: var(--text-light);
 }
 
-.badge-dev {
+.page-header .badge.badge-dev {
   background-color: var(--orange-primary);
   color: var(--text-light);
 }
