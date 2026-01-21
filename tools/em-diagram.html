@@ -38,6 +38,7 @@
         </button>
 
         <nav class="nav">
+          <a href="../index.html" class="nav-link">Home</a>
           <div class="nav-dropdown">
             <a href="../index.html#tools" class="nav-link">Live Tools</a>
             <div class="nav-dropdown-content">
@@ -99,16 +100,19 @@
             and compared.
           </p>
           <p>
-            An EM diagram plots <strong>airspeed vs. load factor (G)</strong>, showing every
-            possible state your aircraft can achieve. The boundaries tell you exactly where
-            performance limits exist:
+            An EM diagram is a <strong>three-axis plot: airspeed vs. turn rate vs. load factor (G)</strong>.
+            Overlaid on this are Ps (specific excess power) contours, angle of bank lines, and turn radius
+            information. It shows every possible performance state your aircraft can achieve and where the
+            boundaries are:
           </p>
 
           <ul class="feature-list">
-            <li><strong>Stall boundary:</strong> Where the wing runs out of lift</li>
+            <li><strong>Stall boundary:</strong> Where the wing runs out of lift at each G level</li>
             <li><strong>Structural limit:</strong> Where the airframe runs out of strength</li>
-            <li><strong>Ps contours:</strong> Where you're gaining or losing energy</li>
-            <li><strong>Corner velocity:</strong> Where maximum performance lives</li>
+            <li><strong>Ps contours:</strong> Energy state—climbing, accelerating, or bleeding speed</li>
+            <li><strong>Angle of bank overlay:</strong> What bank angle produces what G and turn rate</li>
+            <li><strong>Turn radius:</strong> How tight you can turn at each airspeed/G combination</li>
+            <li><strong>Corner velocity (Va):</strong> Where lift limit meets structural limit</li>
           </ul>
 
           <p>
@@ -210,8 +214,9 @@
           <h2 style="margin-top: var(--spacing-md);">Dynamic Vmc & Dynamic Vyse</h2>
           <p>
             The red line in your POH is a lie—or at best, a half-truth. That published Vmc was tested
-            under specific conditions: max gross weight, aft CG, sea level, feathered prop, 5° bank
-            into the good engine. Change any variable, and your actual Vmc changes too.
+            under specific conditions: max gross weight, most rearward CG, sea level, critical engine
+            windmilling, 5° bank into the good engine, takeoff power. Change any variable, and your
+            actual Vmc changes too.
           </p>
           <p>
             <strong>AeroEdge calculates Dynamic Vmc in real-time.</strong> See how your minimum control
