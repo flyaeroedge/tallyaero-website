@@ -80,8 +80,6 @@
           <a href="../learn/index.html" class="nav-link">Learn</a>
           <a href="../preview/index.html" class="nav-link">Sneak Peek</a>
           <a href="../about.html" class="nav-link">About</a>
-          <a href="https://app.flyaeroedge.com" target="_blank" class="btn btn-primary btn-sm">Try EM Diagram</a>
-          <a href="https://overlay.flyaeroedge.com" target="_blank" class="btn btn-primary btn-sm">Try Overlay Tool</a>
         </nav>
       </div>
     </div>
@@ -105,7 +103,10 @@
   <section class="page-header">
     <div class="page-header-overlay"></div>
     <div class="page-header-content container">
-      <span class="badge badge-beta">BETA SOON</span>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: var(--spacing-sm); margin-bottom: var(--spacing-md);">
+        <span class="badge badge-beta">BETA SOON</span>
+        <a href="#beta-signup" class="btn btn-primary">Request Beta Access</a>
+      </div>
       <h1><span class="brand-text"><span class="aero">AERO</span><span class="edge">EDGE</span></span> Logbook</h1>
       <p>The logbook built by aircrew who were frustrated with every other logbook. Fully configurable for pilots, flight engineers, loadmasters, navigators—anyone who logs flight time.</p>
     </div>
@@ -451,74 +452,54 @@
   </section>
 
   <!-- Beta Sign-Up Section -->
-  <section class="beta-signup-section" id="beta-signup">
+  <section class="section section-navy" id="beta-signup">
     <div class="container">
-      <div class="beta-signup-header">
+      <div class="section-header">
         <h2>Join the Limited Beta</h2>
         <p>Be among the first to use <span class="brand-text"><span class="aero">AERO</span><span class="edge">EDGE</span></span> Logbook and help shape the final product.</p>
       </div>
 
-      <div class="beta-signup-container">
-        <!-- Info Panel -->
-        <div class="beta-info-panel">
-          <h3><span class="icon">🚀</span> LIMITED BETA COMING SOON</h3>
-
-          <div class="beta-info-item">
-            <h4><span class="icon">✓</span> 30-Day Beta Period</h4>
-            <p>Full access to test, break, and provide feedback</p>
+      <div class="tool-card">
+        <div class="tool-card-content">
+          <h3 style="color: var(--blue-dark);">What You Get as a Beta Tester</h3>
+          <p style="color: var(--blue-dark);">We're looking for pilots and aircrew who want to help build the logbook they've always wanted.</p>
+          <div class="tool-highlight">
+            <strong>Beta Program Details:</strong>
+            <ul>
+              <li><strong>30-Day Beta Period</strong> — <span style="color: var(--blue-primary);">Full access to test, break, and provide feedback</span></li>
+              <li><strong>PWA App</strong> — <span style="color: var(--blue-primary);">Works on any device, mobile or desktop, install like a native app</span></li>
+              <li><strong>Your Progress Saves</strong> — <span style="color: var(--blue-primary);">Logbook entries, preferences, themes all carry over to launch</span></li>
+              <li><strong>Beta Tester Discount</strong> — <span style="color: var(--blue-primary);">Discounted pricing + seamless data migration at launch</span></li>
+              <li><strong>Direct Line to Dev</strong> — <span style="color: var(--blue-primary);">Built-in feedback system, your input shapes the product</span></li>
+            </ul>
           </div>
-
-          <div class="beta-info-item">
-            <h4><span class="icon">✓</span> PWA App (Mobile + Desktop)</h4>
-            <p>Works on any device — install it like a native app</p>
-          </div>
-
-          <div class="beta-info-item">
-            <h4><span class="icon">✓</span> Your Progress Saves</h4>
-            <p>Build your logbook, set preferences, customize themes — it all carries over</p>
-          </div>
-
-          <div class="beta-info-item">
-            <h4><span class="icon">✓</span> Beta Tester Benefits</h4>
-            <p>Discounted pricing + immediate data migration when we launch</p>
-          </div>
-
-          <div class="beta-info-item">
-            <h4><span class="icon">✓</span> Direct Line to Development</h4>
-            <p>Built-in feedback system — your input shapes the final product</p>
-          </div>
-
-          <div class="beta-info-warning">
-            <h4><span class="icon">⚠️</span> Beta means beta</h4>
-            <p>Some features may be incomplete. Updates push regularly. We want your bugs, gripes, and suggestions — that's the point.</p>
+          <div class="disclaimer" style="margin-top: var(--spacing-md);">
+            <strong>Beta means beta.</strong> Some features may be incomplete. Updates push regularly. We want your bugs, gripes, and suggestions—that's the point.
           </div>
         </div>
 
-        <!-- Sign-Up Form -->
-        <div class="beta-form-container">
+        <div class="beta-form-card">
           <h3>Request Beta Access</h3>
-
-          <form class="beta-form" id="beta-form" action="https://docs.google.com/forms/d/e/1FAIpQLSd0D1RQT6MTthBp-0D5IFTfAb5tpfQHkejRWY-ub0ogCTbpkg/formResponse" method="POST" target="hidden_iframe">
-
+          <form class="beta-form" id="beta-form">
             <div class="beta-form-row">
               <div class="beta-form-group">
                 <label for="beta-firstname">First Name <span class="required">*</span></label>
-                <input type="text" id="beta-firstname" name="entry.2005620554" required placeholder="First name">
+                <input type="text" id="beta-firstname" name="entry.2005620554" required>
               </div>
               <div class="beta-form-group">
                 <label for="beta-lastname">Last Name <span class="required">*</span></label>
-                <input type="text" id="beta-lastname" name="entry.547853813" required placeholder="Last name">
+                <input type="text" id="beta-lastname" name="entry.547853813" required>
               </div>
             </div>
 
             <div class="beta-form-group">
               <label for="beta-email">Email <span class="required">*</span></label>
-              <input type="email" id="beta-email" name="entry.1684897073" required placeholder="your@email.com">
+              <input type="email" id="beta-email" name="entry.1684897073" required>
             </div>
 
-            <div class="checkbox-group">
-              <span class="checkbox-group-label">What best describes you? (Select all that apply)</span>
-              <div class="checkbox-grid">
+            <div class="beta-form-group">
+              <label>What best describes you? <span style="font-weight: normal; color: var(--text-muted);">(select all that apply)</span></label>
+              <div class="checkbox-grid" id="beta-profile">
                 <label class="checkbox-item">
                   <input type="checkbox" name="entry.1581795619" value="Military (Active Duty)">
                   <span>Military (Active Duty)</span>
@@ -556,29 +537,23 @@
                   <span>A&P Mechanic</span>
                 </label>
                 <label class="checkbox-item">
-                  <input type="checkbox" name="entry.1581795619" value="Other Aircrew (FE, Loadmaster, etc.)">
+                  <input type="checkbox" name="entry.1581795619" value="Other Aircrew">
                   <span>Other Aircrew (FE, Loadmaster, etc.)</span>
                 </label>
               </div>
             </div>
 
             <div class="beta-form-group">
-              <label for="beta-about">Tell us about your flying (optional)</label>
-              <textarea id="beta-about" name="entry.850356308" placeholder="What aircraft do you fly? What's your primary use case? Any specific features you're looking for?"></textarea>
+              <label for="beta-about">Tell us about your flying <span style="color: var(--text-muted); font-weight: normal;">(optional)</span></label>
+              <textarea id="beta-about" name="entry.850356308" rows="3"></textarea>
             </div>
 
-            <div class="beta-form-submit">
-              <button type="submit" class="btn btn-primary btn-lg">Request Beta Access</button>
-            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Request Beta Access</button>
           </form>
-
           <div class="beta-form-message" id="beta-form-message"></div>
         </div>
       </div>
     </div>
-
-    <!-- Hidden iframe for Google Forms submission -->
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
   </section>
 
   <!-- Footer -->
