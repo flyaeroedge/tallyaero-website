@@ -291,6 +291,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
+// ---------- Feature Modal Handling ----------
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.classList.add('active');
+    document.body.classList.add('modal-open');
+  }
+}
+
+function closeModal() {
+  const activeModal = document.querySelector('.modal-overlay.active');
+  if (activeModal) {
+    activeModal.classList.remove('active');
+    document.body.classList.remove('modal-open');
+  }
+}
+
+// Close modal on overlay click
+document.addEventListener('click', function(e) {
+  if (e.target.classList.contains('modal-overlay')) {
+    closeModal();
+  }
+});
+
+// Close modal on Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeModal();
+  }
+});
+
 // ---------- Utility Functions ----------
 
 /**
