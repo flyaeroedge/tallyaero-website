@@ -293,19 +293,43 @@ document.addEventListener('DOMContentLoaded', function() {
       submitButton.textContent = 'Submitting...';
       submitButton.disabled = true;
 
-      // Build form data
-      const formData = new FormData();
-      formData.append('entry.2005620554', firstName);
-      formData.append('entry.547853813', lastName);
-      formData.append('entry.1684897073', email);
-      formData.append('entry.850356308', about);
+      // Create hidden iframe for form submission
+      var iframeName = 'hidden-form-iframe-' + Date.now();
+      var iframe = document.createElement('iframe');
+      iframe.name = iframeName;
+      iframe.style.display = 'none';
+      document.body.appendChild(iframe);
 
-      // Submit via fetch (no-cors mode - won't get response but data submits)
-      fetch(betaForm.action, {
-        method: 'POST',
-        mode: 'no-cors',
-        body: formData
-      }).then(function() {
+      // Create dynamic form targeting the iframe
+      var dynamicForm = document.createElement('form');
+      dynamicForm.method = 'POST';
+      dynamicForm.action = betaForm.action;
+      dynamicForm.target = iframeName;
+      dynamicForm.style.display = 'none';
+
+      // Add form fields
+      var fields = {
+        'entry.2005620554': firstName,
+        'entry.547853813': lastName,
+        'entry.1684897073': email,
+        'entry.850356308': about
+      };
+
+      for (var name in fields) {
+        var input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = name;
+        input.value = fields[name];
+        dynamicForm.appendChild(input);
+      }
+
+      document.body.appendChild(dynamicForm);
+      dynamicForm.submit();
+
+      // Clean up and show success after delay
+      setTimeout(function() {
+        document.body.removeChild(dynamicForm);
+        document.body.removeChild(iframe);
         showFormMessage('Thanks for signing up! We\'ll be in touch when the beta launches.', 'success');
         submitButton.textContent = 'Request Sent!';
         betaForm.reset();
@@ -314,12 +338,7 @@ document.addEventListener('DOMContentLoaded', function() {
           submitButton.textContent = originalText;
           submitButton.disabled = false;
         }, 3000);
-      }).catch(function(error) {
-        console.error('Form submission error:', error);
-        showFormMessage('Something went wrong. Please try again.', 'error');
-        submitButton.textContent = originalText;
-        submitButton.disabled = false;
-      });
+      }, 1500);
     });
 
     function showFormMessage(message, type) {
