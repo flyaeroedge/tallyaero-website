@@ -187,7 +187,7 @@
   }
   </script>
 </head>
-<body class="has-beta-banner">
+<body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- Header -->
@@ -227,28 +227,11 @@
     </div>
   </header>
 
-  <!-- Beta Announcement Banner -->
-  <div class="beta-banner" id="beta-banner">
-    <div class="beta-banner-content">
-      <span class="beta-banner-text">
-        <span class="icon">🚀</span>
-        Limited Beta Coming Soon — Be First In Line
-      </span>
-      <a href="#beta-signup" class="beta-banner-cta">
-        Sign Up for Early Access →
-      </a>
-    </div>
-    <button class="beta-banner-dismiss" id="beta-banner-dismiss" aria-label="Dismiss banner">×</button>
-  </div>
-
   <!-- Page Header -->
   <section class="page-header" id="main-content">
     <div class="page-header-overlay"></div>
     <div class="page-header-content container">
-      <div style="display: flex; flex-direction: column; align-items: center; gap: var(--spacing-sm); margin-bottom: var(--spacing-md);">
-        <span class="badge badge-beta">BETA SOON</span>
-        <a href="#beta-signup" class="btn btn-primary">Request Beta Access</a>
-      </div>
+      <span class="badge badge-beta" style="margin-bottom: var(--spacing-md);">BETA LIVE</span>
       <h1><span class="brand-text"><span class="aero">AERO</span><span class="edge">EDGE</span></span> Logbook</h1>
       <p>The logbook built by a pilot who was frustrated with every other logbook. Fully configurable for pilots, flight engineers, loadmasters, navigators - anyone who logs flight time.</p>
     </div>
@@ -957,65 +940,6 @@
           <summary style="font-weight: 600; cursor: pointer; color: var(--text-heading);">Is AeroEdge better than ForeFlight logbook or LogTen Pro?</summary>
           <p style="margin-top: var(--spacing-sm); color: var(--text-dark);">AeroEdge offers capabilities not found in other logbooks: military flight time conversion, AI-powered paper logbook OCR, context logbooks for multiple flying roles, and integrated training requirements tracking. Unlike cloud-only solutions, AeroEdge offers local storage options so you're never locked out of your own data.</p>
         </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- Beta Sign-Up Section -->
-  <section class="section section-navy" id="beta-signup">
-    <div class="container">
-      <div class="section-header">
-        <h2>Join the Limited Beta</h2>
-        <p>Be among the first to use <span class="brand-text"><span class="aero">AERO</span><span class="edge">EDGE</span></span> Logbook and help shape the final product.</p>
-      </div>
-
-      <div class="tool-card">
-        <div class="tool-card-content">
-          <h3 style="color: var(--blue-dark);">What You Get as a Beta Tester</h3>
-          <p style="color: var(--blue-dark);">We're looking for pilots and aircrew who want to help build the logbook they've always wanted.</p>
-          <div class="tool-highlight">
-            <strong>Beta Program Details:</strong>
-            <ul>
-              <li><strong>30-Day Beta Period</strong> — <span style="color: var(--blue-primary);">Full access to test, break, and provide feedback</span></li>
-              <li><strong>PWA App</strong> — <span style="color: var(--blue-primary);">Works on any device, mobile or desktop, install like a native app</span></li>
-              <li><strong>Your Progress Saves</strong> — <span style="color: var(--blue-primary);">Logbook entries, preferences, themes all carry over to launch</span></li>
-              <li><strong>Beta Tester Discount</strong> — <span style="color: var(--blue-primary);">Discounted pricing + seamless data migration at launch</span></li>
-              <li><strong>Direct Line to Dev</strong> — <span style="color: var(--blue-primary);">Built-in feedback system, your input shapes the product</span></li>
-            </ul>
-          </div>
-          <div class="disclaimer" style="margin-top: var(--spacing-md);">
-            <strong>Beta means beta.</strong> Some features may be incomplete. Updates push regularly. We want your bugs, gripes, and suggestions—that's the point.
-          </div>
-        </div>
-
-        <div class="beta-form-card">
-          <h3>Request Beta Access</h3>
-          <form class="beta-form" id="beta-form" action="https://docs.google.com/forms/d/e/1FAIpQLSd0D1RQT6MTthBp-0D5IFTfAb5tpfQHkejRWY-ub0ogCTbpkg/formResponse" method="POST">
-            <div class="beta-form-row">
-              <div class="beta-form-group">
-                <label for="beta-firstname">First Name <span class="required">*</span></label>
-                <input type="text" id="beta-firstname" name="entry.2005620554" required>
-              </div>
-              <div class="beta-form-group">
-                <label for="beta-lastname">Last Name <span class="required">*</span></label>
-                <input type="text" id="beta-lastname" name="entry.547853813" required>
-              </div>
-            </div>
-
-            <div class="beta-form-group">
-              <label for="beta-email">Email <span class="required">*</span></label>
-              <input type="email" id="beta-email" name="entry.1684897073" required>
-            </div>
-
-            <div class="beta-form-group">
-              <label for="beta-about">Tell us about your flying <span style="color: var(--text-muted); font-weight: normal;">(optional)</span></label>
-              <textarea id="beta-about" name="entry.850356308" rows="3"></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary" style="width: 100%;">Request Beta Access</button>
-          </form>
-          <div class="beta-form-message" id="beta-form-message"></div>
-        </div>
       </div>
     </div>
   </section>
