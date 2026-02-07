@@ -98,6 +98,8 @@
               <a href="products/aircraft.html">Aircraft</a>
               <a href="products/scheduler.html">Scheduler</a>
               <a href="products/syllabus.html">Syllabus</a>
+              <a href="#ecosystem">Billing</a>
+              <a href="#ecosystem">Admin</a>
             </div>
           </div>
           <a href="learn/index.html" class="nav-link">Learn</a>
@@ -180,49 +182,134 @@
     <div class="container">
       <div class="section-header">
         <h2>The <span class="brand-text"><span class="aero">AERO</span><span class="edge">EDGE</span></span> Ecosystem</h2>
-        <p>Six tools. One integrated platform. Log once, everything updates.</p>
+        <p>Six nodes. One platform. Every action cascades across the system in real time.</p>
       </div>
 
-      <div class="ecosystem-flow">
-        <div class="flow-example">
-          <div class="flow-step">Log a flight</div>
-          <div class="flow-arrow">&rarr;</div>
-          <div class="flow-step">Aircraft times update</div>
-          <div class="flow-arrow">&rarr;</div>
-          <div class="flow-step">Maintenance countdowns adjust</div>
-          <div class="flow-arrow">&rarr;</div>
-          <div class="flow-step">Scheduling availability updates</div>
-        </div>
-      </div>
-
-      <div class="products-grid" style="margin-top: var(--spacing-xl);">
+      <!-- Node cards — 6 modules -->
+      <div class="products-grid products-grid-3" style="margin-top: var(--spacing-xl);">
         <a href="products/logbook.html" class="product-card">
           <span class="badge badge-beta">BETA LIVE</span>
           <h3>Logbook</h3>
-          <p class="product-tagline">Digital logbook that handles military conversion and paper digitization.</p>
+          <p class="product-tagline">Your flight data, always yours.</p>
+          <ul class="feature-list feature-list-compact">
+            <li>Digital flight records with FAR compliance</li>
+            <li>Currency tracking &amp; 8710 calculations</li>
+            <li>Smart OCR import from paper logbooks</li>
+          </ul>
           <span class="product-link">Learn more &rarr;</span>
         </a>
 
         <a href="products/aircraft.html" class="product-card">
           <span class="badge badge-coming">In Development</span>
           <h3>Aircraft</h3>
-          <p class="product-tagline">Maintenance tracking that updates itself when you log flights.</p>
+          <p class="product-tagline">Fleet intelligence at your fingertips.</p>
+          <ul class="feature-list feature-list-compact">
+            <li>Aircraft profiles with FAA registry lookup</li>
+            <li>Squawk tracking &amp; compliance monitoring</li>
+            <li>Hobbs, tach &amp; maintenance records</li>
+          </ul>
           <span class="product-link">Learn more &rarr;</span>
         </a>
 
         <a href="products/scheduler.html" class="product-card">
           <span class="badge badge-coming">In Development</span>
           <h3>Scheduler</h3>
-          <p class="product-tagline">Weather-aware scheduling with automatic instructor replacement.</p>
+          <p class="product-tagline">Dispatch board for the modern flight school.</p>
+          <ul class="feature-list feature-list-compact">
+            <li>Booking management &amp; resource scheduling</li>
+            <li>Instructor availability &amp; assignments</li>
+            <li>Dispatch board with real-time status</li>
+          </ul>
           <span class="product-link">Learn more &rarr;</span>
         </a>
 
         <a href="products/syllabus.html" class="product-card">
           <span class="badge badge-coming">In Development</span>
           <h3>Syllabus</h3>
-          <p class="product-tagline">Part 61/141 training programs with live CFR compliance.</p>
+          <p class="product-tagline">Structured training from zero to ATP.</p>
+          <ul class="feature-list feature-list-compact">
+            <li>Part 61 &amp; Part 141 syllabus builder</li>
+            <li>Student enrollment &amp; progress tracking</li>
+            <li>ACS-aligned lesson completion</li>
+          </ul>
           <span class="product-link">Learn more &rarr;</span>
         </a>
+
+        <div class="product-card">
+          <span class="badge badge-coming">In Development</span>
+          <h3>Billing</h3>
+          <p class="product-tagline">Invoicing that writes itself.</p>
+          <ul class="feature-list feature-list-compact">
+            <li>Auto-generate invoices from bookings</li>
+            <li>Rate cards &amp; account management</li>
+            <li>Payment tracking &amp; account holds</li>
+          </ul>
+        </div>
+
+        <div class="product-card">
+          <span class="badge badge-coming">In Development</span>
+          <h3>Admin</h3>
+          <p class="product-tagline">Full control over your organisation.</p>
+          <ul class="feature-list feature-list-compact">
+            <li>Role-based access control</li>
+            <li>Fleet &amp; scheduling administration</li>
+            <li>User management &amp; invitations</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Data flow — how nodes talk to each other -->
+      <div class="ecosystem-flow" style="margin-top: var(--spacing-2xl);">
+        <h3 style="text-align: center; margin-bottom: var(--spacing-md); color: var(--text-light); font-size: var(--font-size-lg);">Actions cascade across nodes</h3>
+        <p style="text-align: center; margin-bottom: var(--spacing-lg); color: var(--text-muted); font-size: var(--font-size-sm);">
+          When something happens in one module, every related module reacts instantly.
+        </p>
+        <div class="flow-example">
+          <div class="flow-step">Complete a booking</div>
+          <div class="flow-arrow">&rarr;</div>
+          <div class="flow-step">Draft flight created in Logbook</div>
+          <div class="flow-arrow">&rarr;</div>
+          <div class="flow-step">Aircraft hobbs &amp; tach update</div>
+          <div class="flow-arrow">&rarr;</div>
+          <div class="flow-step">Maintenance countdowns adjust</div>
+        </div>
+        <div class="flow-example" style="margin-top: var(--spacing-sm);">
+          <div class="flow-step">Ground an aircraft</div>
+          <div class="flow-arrow">&rarr;</div>
+          <div class="flow-step">All future bookings flagged</div>
+          <div class="flow-arrow">&rarr;</div>
+          <div class="flow-step">Affected students notified</div>
+          <div class="flow-arrow">&rarr;</div>
+          <div class="flow-step">Billing adjusts automatically</div>
+        </div>
+      </div>
+
+      <!-- Platform features -->
+      <div class="grid grid-4" style="margin-top: var(--spacing-2xl); gap: var(--spacing-md);">
+        <div class="ecosystem-feature-card">
+          <h4>Real-time Sync</h4>
+          <p>Firebase Firestore keeps every device in sync. Changes appear in seconds.</p>
+        </div>
+        <div class="ecosystem-feature-card">
+          <h4>Offline First</h4>
+          <p>Every module works without internet. Data syncs when you reconnect.</p>
+        </div>
+        <div class="ecosystem-feature-card">
+          <h4>Every Screen</h4>
+          <p>Desktop, mobile app, and tablet — one codebase, every form factor.</p>
+        </div>
+        <div class="ecosystem-feature-card">
+          <h4>Your Data</h4>
+          <p>Local storage first. Cloud sync optional. You always own your records.</p>
+        </div>
+      </div>
+
+      <!-- Launch App CTA -->
+      <div style="text-align: center; margin-top: var(--spacing-2xl);">
+        <a href="https://portal.flyaeroedge.com" class="btn btn-primary btn-lg">Launch App</a>
+        <p style="color: var(--text-muted); font-size: var(--font-size-sm); margin-top: var(--spacing-sm);">
+          One sign-in. All six modules. Google, Apple, or offline.
+        </p>
       </div>
     </div>
   </section>
@@ -268,12 +355,14 @@
         </div>
 
         <div class="footer-links">
-          <h4>Coming Soon</h4>
+          <h4>Ecosystem</h4>
           <ul>
             <li><a href="products/logbook.html">Logbook</a></li>
             <li><a href="products/aircraft.html">Aircraft</a></li>
             <li><a href="products/scheduler.html">Scheduler</a></li>
             <li><a href="products/syllabus.html">Syllabus</a></li>
+            <li><a href="#ecosystem">Billing</a></li>
+            <li><a href="#ecosystem">Admin</a></li>
           </ul>
         </div>
 

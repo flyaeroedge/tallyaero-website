@@ -2195,3 +2195,77 @@ fieldset.beta-form-group legend {
     display: block;
   }
 }
+
+/* ─── Ecosystem: 3-column product grid ─── */
+.products-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+}
+
+@media (max-width: 1024px) {
+  .products-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .products-grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Compact feature lists inside product cards ─── */
+.feature-list-compact {
+  list-style: none;
+  padding: 0;
+  margin: var(--spacing-sm) 0 0;
+}
+
+.feature-list-compact li {
+  color: var(--text-muted);
+  font-size: var(--font-size-xs);
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  position: relative;
+}
+
+.feature-list-compact li::before {
+  content: "\2192";
+  position: absolute;
+  left: 0;
+  color: var(--orange-primary);
+}
+
+/* ─── Ecosystem feature cards (platform highlights) ─── */
+.ecosystem-feature-card {
+  background: linear-gradient(135deg, var(--bg-medium) 0%, var(--bg-dark) 100%);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ecosystem-feature-card h4 {
+  color: var(--text-light);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.ecosystem-feature-card p {
+  color: var(--text-muted);
+  font-size: var(--font-size-xs);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
