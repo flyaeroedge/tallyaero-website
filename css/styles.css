@@ -198,13 +198,69 @@ a:hover {
   display: flex;
   justify-content: center;
   background-color: var(--navy-bg);
-  padding: var(--spacing-xs) 0;
+  padding: var(--spacing-sm) 0;
 }
 
 .logo {
   height: 100px;
   width: auto;
   max-width: 100%;
+}
+
+/* Text-based logo */
+.logo-text-link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+.logo-text-link:hover {
+  text-decoration: none;
+}
+.logo-wordmark {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 2.8rem;
+  letter-spacing: 4px;
+  line-height: 1;
+}
+.logo-wordmark .aero {
+  background: linear-gradient(180deg, #5DA8E8 0%, #2980B9 40%, #1a5a8a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.logo-wordmark .edge {
+  background: linear-gradient(180deg, #FF8533 0%, #E65C00 40%, #b34700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.logo-tagline {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 0.7rem;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Footer text logo */
+.footer-logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  margin-bottom: var(--spacing-sm);
+}
+.footer-logo-text .logo-wordmark {
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+}
+.footer-logo-text .logo-tagline {
+  font-size: 0.6rem;
+  letter-spacing: 5px;
 }
 
 /* Navigation bar below logo */
