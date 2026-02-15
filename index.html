@@ -97,13 +97,7 @@
               <a href="#ecosystem">Admin</a>
             </div>
           </div>
-          <div class="nav-dropdown">
-            <a href="#tools" class="nav-link">Tools</a>
-            <div class="nav-dropdown-content">
-              <a href="tools/em-diagram.html">EM Diagram</a>
-              <a href="tools/maneuver-overlay.html">Maneuver Overlay</a>
-            </div>
-          </div>
+          <a href="#training-tools" class="nav-link">Training</a>
           <a href="about.html" class="nav-link">About</a>
           <a href="#contact" class="nav-link">Contact</a>
           <a href="https://aeroedge-logbook.web.app" target="_blank" class="btn btn-primary btn-sm">Try Logbook Beta</a>
@@ -247,8 +241,193 @@
           </ul>
         </div>
       </div>
+
+      <!-- DASHTWO Demo Questions -->
+      <div style="margin-top: var(--spacing-2xl);">
+        <h3 style="color: var(--text-light); text-align: center; margin-bottom: var(--spacing-lg);">See It In Action</h3>
+        <div class="grid grid-2" style="gap: var(--spacing-lg);">
+          <button class="dashtwo-demo-btn" onclick="openModal('modal-dashtwo-currency')">
+            <span class="dashtwo-demo-label">Pilot asked DASHTWO:</span>
+            <span class="dashtwo-demo-question">&ldquo;I'm a private pilot who hasn't flown in 14 months. What do I need to do before I can take a friend flying at night?&rdquo;</span>
+            <span class="dashtwo-demo-cta">See DASHTWO's response &rarr;</span>
+          </button>
+
+          <button class="dashtwo-demo-btn" onclick="openModal('modal-dashtwo-cfi')">
+            <span class="dashtwo-demo-label">Pilot asked DASHTWO:</span>
+            <span class="dashtwo-demo-question">&ldquo;I'm preparing for my initial CFI checkride. What do NTSB accident reports reveal about loss of control during flight training, and how should I teach stall recognition and recovery?&rdquo;</span>
+            <span class="dashtwo-demo-cta">See DASHTWO's response &rarr;</span>
+          </button>
+        </div>
+      </div>
     </div>
   </section>
+
+  <!-- DASHTWO Modal: Night Currency -->
+  <div class="modal-overlay" id="modal-dashtwo-currency">
+    <div class="modal-content dashtwo-modal">
+      <div class="modal-header dashtwo-modal-header">
+        <div class="dashtwo-modal-title-row">
+          <img src="images/dashtwo-icon.jpg" alt="DASHTWO" class="dashtwo-modal-icon">
+          <div>
+            <h3>DASHTWO</h3>
+            <span class="dashtwo-modal-subtitle">Response based on pilot's logbook data</span>
+          </div>
+        </div>
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+      </div>
+      <div class="modal-body dashtwo-modal-body">
+        <div class="dashtwo-user-msg">
+          I'm a private pilot who hasn't flown in 14 months. What do I need to do before I can take a friend flying at night?
+        </div>
+
+        <div class="dashtwo-ai-msg">
+          <h4 class="dashtwo-ai-heading dashtwo-ai-heading-red">You Cannot Legally Fly at Night Right Now &mdash; Multiple Regulatory Barriers</h4>
+          <p>Based on your logbook data and the regulations, you have three separate compliance problems that must be resolved before you can take a friend flying at night:</p>
+
+          <h4 class="dashtwo-ai-subheading">PROBLEM 1: Flight Review Expired</h4>
+          <p><strong>Status: Your flight review has expired.</strong> Per <strong>14 CFR 61.56(c)</strong>, you may not act as pilot in command of any aircraft unless you have completed a flight review within the preceding 24 calendar months. At 14 months of inactivity, you are well past that deadline.</p>
+          <p><strong>What you must do:</strong></p>
+          <ul>
+            <li>Schedule and complete a 1-hour flight + 1-hour ground review with an authorized instructor</li>
+            <li>The instructor must endorse your logbook certifying satisfactory completion</li>
+            <li>This is a prerequisite to any other flying</li>
+          </ul>
+
+          <h4 class="dashtwo-ai-subheading">PROBLEM 2: Day Passenger Currency Expired</h4>
+          <p><strong>Status: NOT CURRENT for day VFR with passengers.</strong> Your logbook shows 12 day landings in the last 90 days, with the last landing 9 days ago. However, those landings are now outside the 90-day window due to your 14-month gap. Per <strong>14 CFR 61.57(a)(1)</strong>, you must have made at least 3 takeoffs and 3 landings within the preceding 90 days to carry passengers during day VFR.</p>
+          <p><strong>What you must do:</strong></p>
+          <ul>
+            <li>Complete at least 3 takeoffs and 3 landings as sole manipulator of the flight controls in the same aircraft category/class</li>
+          </ul>
+
+          <h4 class="dashtwo-ai-subheading">PROBLEM 3: Night Passenger Currency &mdash; NOT CURRENT</h4>
+          <p><strong>Status: You cannot legally fly at night with passengers.</strong> Per <strong>14 CFR 61.57(b)(1)</strong>, to act as pilot in command carrying passengers during the period 1 hour after sunset to 1 hour before sunrise, you must have made at least 3 takeoffs and 3 landings to a full stop during that same night period within the preceding 90 days. Your logbook shows:</p>
+          <ul>
+            <li>72.8 hours of night time total</li>
+            <li>12 night landings in the last 90 days</li>
+            <li>But zero full-stop night landings (your recent night landings were touch-and-goes during carrier qualification training)</li>
+          </ul>
+          <p><strong>Critical distinction:</strong> Touch-and-go landings do NOT satisfy 61.57(b). The regulation explicitly requires "landings to a full stop."</p>
+
+          <h4 class="dashtwo-ai-subheading">Your Regulatory Pathway</h4>
+          <p>To legally take your friend flying at night, execute this sequence:</p>
+          <ol>
+            <li><strong>Schedule a flight review with a CFI</strong> (1 hour flight + 1 hour ground) &mdash; This unlocks your ability to act as PIC at all</li>
+            <li><strong>Perform 3 day takeoffs and 3 day landings</strong> with an instructor &mdash; Regains day passenger currency per 61.57(a)</li>
+            <li><strong>Perform 3 night full-stop landings</strong> with an instructor &mdash; Regains night passenger currency per 61.57(b). These must occur during the period 1 hour after sunset to 1 hour before sunrise. Each landing must be a full stop (not a touch-and-go).</li>
+          </ol>
+          <p>Once all three are complete, you can legally carry your friend on a night flight.</p>
+
+          <h4 class="dashtwo-ai-subheading">Important Note on Your Military Experience</h4>
+          <p>Your logbook shows extensive carrier qualification and night vision goggle training in military turbine aircraft (F/A-18E/F, T-45C, T-6B). However, <strong>14 CFR 61.57 applies to all pilots</strong>, regardless of military background. The regulation does not grandfather military night currency into civilian operations. You must meet the civilian standard: 3 full-stop night landings in the preceding 90 days in a civilian aircraft category/class.</p>
+
+          <div class="dashtwo-ai-footer">
+            <span>20 sources cited</span>
+            <span>Verify with current official FAA publications.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DASHTWO Modal: CFI Stall Training -->
+  <div class="modal-overlay" id="modal-dashtwo-cfi">
+    <div class="modal-content dashtwo-modal">
+      <div class="modal-header dashtwo-modal-header">
+        <div class="dashtwo-modal-title-row">
+          <img src="images/dashtwo-icon.jpg" alt="DASHTWO" class="dashtwo-modal-icon">
+          <div>
+            <h3>DASHTWO</h3>
+            <span class="dashtwo-modal-subtitle">Response with regulatory and NTSB source citations</span>
+          </div>
+        </div>
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+      </div>
+      <div class="modal-body dashtwo-modal-body">
+        <div class="dashtwo-user-msg">
+          I'm preparing for my initial CFI checkride. What do NTSB accident reports reveal about loss of control during flight training, and how should I teach stall recognition and recovery to stay aligned with what the FAA wants instructors to emphasize?
+        </div>
+
+        <div class="dashtwo-ai-msg">
+          <h4 class="dashtwo-ai-heading">Loss of Control in Flight Training: What NTSB Data Shows and How to Teach Stall Recognition/Recovery</h4>
+
+          <h4 class="dashtwo-ai-subheading">What NTSB Accident Data Reveals</h4>
+          <p><strong>The Scope of the Problem</strong> &mdash; Per FAA Advisory Circular 61-67C and multiple safety alerts:</p>
+          <ul>
+            <li>Stall/spin accidents account for approximately <strong>one-quarter of all fatal general aviation accidents</strong></li>
+            <li>Loss of Control In-flight (LOC-I) is the <strong>#1 cause of GA fatalities</strong> &mdash; approximately 50% of all aviation fatalities</li>
+            <li>Most stall/spin accidents occur when a pilot is momentarily distracted from the primary task of flying</li>
+          </ul>
+
+          <p><strong>Common Scenarios (from NTSB reports):</strong></p>
+          <ul>
+            <li><strong>Base-to-final turn</strong> &mdash; Overshooting centerline, excessive bank, accelerated stall</li>
+            <li><strong>Engine failure on takeoff</strong> &mdash; Attempting to return to runway at low altitude</li>
+            <li><strong>Low-altitude maneuvering</strong> &mdash; Low passes, steep pull-ups, aggressive maneuvering</li>
+            <li><strong>Distraction-induced stalls</strong> &mdash; Fixating on ground objects, dealing with emergencies</li>
+          </ul>
+
+          <h4 class="dashtwo-ai-subheading">What the FAA Wants CFIs to Emphasize</h4>
+
+          <p><strong>1. Angle of Attack &mdash; Not Airspeed &mdash; Causes Stalls</strong></p>
+          <p>From <strong>AC 61-67C</strong>: "A stall is a loss of lift and increase in drag that occurs when an aircraft is flown at an angle of attack greater than the angle for maximum lift... <strong>A STALL CAN OCCUR AT ANY AIRSPEED, IN ANY ATTITUDE, AT ANY POWER SETTING.</strong>"</p>
+
+          <p><strong>2. The Stall Recovery Template (from AC 120-109A)</strong></p>
+          <ol>
+            <li>Reduce AOA (push forward) &mdash; <strong>THIS IS THE MOST CRITICAL ACTION</strong></li>
+            <li>Apply maximum thrust (unless contraindicated)</li>
+            <li>Roll wings level (coordinated aileron and rudder)</li>
+            <li>Return to desired flight path (avoid secondary stall)</li>
+          </ol>
+
+          <p><strong>3. Current ACS Standards (SAFO 17009)</strong></p>
+          <ul>
+            <li><strong>Slow Flight:</strong> Establish airspeed where any further AOA increase, load factor increase, or power reduction would result in stall warning. Do NOT fly with continuous stall warning.</li>
+            <li><strong>Power-Off &amp; Power-On Stalls:</strong> Acknowledge cues of impending stall, then recover promptly after full stall. Smooth, coordinated inputs throughout.</li>
+          </ul>
+
+          <p><strong>4. Recognize the "Mush"</strong></p>
+          <p>If the elevator is at or near full aft deflection and the airplane is descending, it is stalled &mdash; reduce AOA immediately. The vertical speed indicator may show 800+ fpm descent while the pilot holds full back pressure without a traditional stall break.</p>
+
+          <p><strong>5. Avoid Secondary Stalls</strong></p>
+          <p>From <strong>AC 120-109A</strong>: After reducing AOA and adding power, do not aggressively pull back. Allow airspeed to build. <strong>SAFO 17009 explicitly states:</strong> "Evaluation criteria for a recovery from an impending stall should not include a predetermined value for altitude loss."</p>
+
+          <h4 class="dashtwo-ai-subheading">How to Teach Stall Recognition and Recovery</h4>
+
+          <p><strong>Phase 1: Maneuver-Based Training (altitude)</strong></p>
+          <ul>
+            <li>Slow Flight at airspeed where any increase in AOA triggers warning</li>
+            <li>Power-on, power-off, and accelerated stalls in various configurations</li>
+            <li>Recovery using the stall recovery template</li>
+          </ul>
+
+          <p><strong>Phase 2: Scenario-Based Training (realistic distractions)</strong></p>
+          <ul>
+            <li>Simulated radio calls during pattern work</li>
+            <li>Simulated passenger questions and emergencies</li>
+            <li>Overshooting base-to-final (teach go-around, not "salvaging")</li>
+          </ul>
+
+          <p><strong>Phase 3: Upset Recovery Training</strong></p>
+          <ul>
+            <li>Unusual attitudes and upset recovery</li>
+            <li>Emphasis: Reduce AOA first, then recover from unusual attitude</li>
+          </ul>
+
+          <h4 class="dashtwo-ai-subheading">What NOT to Teach</h4>
+          <ul>
+            <li><strong>"Minimize altitude loss"</strong> &mdash; Encourages secondary stalls. ACS removed altitude loss criteria.</li>
+            <li><strong>"Stalls only happen at low airspeed"</strong> &mdash; False. Accelerated stalls occur at cruise speed.</li>
+          </ul>
+
+          <div class="dashtwo-ai-footer">
+            <span>Sources: AC 61-67C, AC 120-109A, SAFO 17009, NTSB Safety Alert 019, FAA-S-ACS-6A/7</span>
+            <span>Verify with current official FAA publications.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ============ ECOSYSTEM - FLIGHT SCHOOL MANAGEMENT ============ -->
   <section class="section section-navy" id="ecosystem">
@@ -385,28 +564,129 @@
     </div>
   </section>
 
-  <!-- ============ ANALYSIS TOOLS ============ -->
-  <section class="section" id="tools">
+  <!-- ============ TRAINING TOOLS ============ -->
+  <section class="section" id="training-tools">
     <div class="container">
       <div class="section-header">
-        <h2>Analysis Tools</h2>
-        <p>Fighter-grade performance analysis. Free to use. Being integrated into the AeroEdge ecosystem.</p>
+        <span class="badge badge-beta">BETA LIVE</span>
+        <h2>Training Tools</h2>
+        <p>Interactive tools built into the logbook. Radio comms, performance analysis, spatial reasoning, aerodynamics &mdash; all in one place.</p>
       </div>
 
-      <div class="grid grid-2">
-        <a href="tools/em-diagram.html" class="product-card product-card-compact">
-          <span class="badge badge-live">Live &mdash; Free</span>
-          <h3>EM Diagram Generator</h3>
-          <p>Energy-Maneuverability diagrams showing your aircraft's complete performance envelope. 100+ aircraft. Dynamic Vmc/Vyse for multi-engine.</p>
-          <span class="product-link">Try it free &rarr;</span>
-        </a>
+      <div class="products-grid products-grid-3" style="margin-top: var(--spacing-xl);">
+        <div class="product-card">
+          <h3>Comm Sheet Generator</h3>
+          <p class="product-tagline">Customized radio scripts for your route.</p>
+          <ul class="feature-list feature-list-compact">
+            <li>330+ radio calls across 16 flight phases</li>
+            <li>VFR/IFR for towered and non-towered airports</li>
+            <li>Editable calls, drag-to-reorder, save templates</li>
+            <li>Export to PDF or DOCX for kneeboard use</li>
+          </ul>
+        </div>
 
-        <a href="tools/maneuver-overlay.html" class="product-card product-card-compact">
-          <span class="badge badge-live">Live &mdash; Free</span>
+        <div class="product-card">
+          <h3>Comm Drill</h3>
+          <p class="product-tagline">Speech recognition radio practice.</p>
+          <ul class="feature-list feature-list-compact">
+            <li>Speech recognition with word-by-word scoring</li>
+            <li>Full ATC conversation mode with TTS voice</li>
+            <li>330+ calls across all flight phases</li>
+            <li>Skill tracking with practice-weak-calls mode</li>
+          </ul>
+        </div>
+
+        <div class="product-card">
+          <h3>EM Diagram Generator</h3>
+          <p class="product-tagline">Aircraft performance visualization.</p>
+          <ul class="feature-list feature-list-compact">
+            <li>100+ aircraft with accurate performance data</li>
+            <li>Interactive drag/zoom on the EM diagram</li>
+            <li>Multi-engine Vmca/Vyse visualization</li>
+            <li>Export to PNG/PDF for briefings</li>
+          </ul>
+        </div>
+
+        <div class="product-card">
           <h3>Maneuver Overlay Tool</h3>
-          <p>Visualize FAA maneuvers as energy problems. See how altitude, airspeed, and bank interact. Impossible turn analysis on your actual airport.</p>
-          <span class="product-link">Try it free &rarr;</span>
-        </a>
+          <p class="product-tagline">Maneuvers on real satellite imagery.</p>
+          <ul class="feature-list feature-list-compact">
+            <li>11+ maneuvers: Impossible Turn, Power-Off 180, Steep Turns</li>
+            <li>115+ aircraft performance profiles</li>
+            <li>Accounts for wind, weight, and density altitude</li>
+            <li>Click on map to set maneuver start points</li>
+          </ul>
+        </div>
+
+        <div class="product-card">
+          <h3>Reciprocal Heading Drills</h3>
+          <p class="product-tagline">Timed quizzes for mental math speed.</p>
+          <ul class="feature-list feature-list-compact">
+            <li>5 levels: compass tap, numpad, full packet, audio, 3-digit</li>
+            <li>Adaptive growing deck &mdash; unlock headings as you master</li>
+            <li>Focus, Optimize, and Mastery Challenge modes</li>
+            <li>Progress tracking across all 36 compass headings</li>
+          </ul>
+        </div>
+
+        <div class="product-card">
+          <h3>Rules of Thumb</h3>
+          <p class="product-tagline">130+ aviation rules, searchable and drillable.</p>
+          <ul class="feature-list feature-list-compact">
+            <li>130+ curated rules across 17 categories</li>
+            <li>Math-verified rules with worked examples</li>
+            <li>Debunked rules flagged with explanations</li>
+            <li>39 timed drills across 9 categories</li>
+          </ul>
+        </div>
+
+        <div class="product-card">
+          <h3>Holding Pattern Trainer</h3>
+          <p class="product-tagline">Progressive spatial reasoning drills.</p>
+          <ul class="feature-list feature-list-compact">
+            <li>4 modes: Learning, Intermediate, Advanced, Mastery</li>
+            <li>6 difficulty phases from dead-center to boundary cases</li>
+            <li>Dual algorithm: spatial reasoning + Navy shortcut method</li>
+            <li>Standard and nonstandard turns with 500+ real navaids</li>
+          </ul>
+        </div>
+
+        <div class="product-card">
+          <h3>Talk-On</h3>
+          <p class="product-tagline">Voice-driven spatial communication training.</p>
+          <ul class="feature-list feature-list-compact">
+            <li>12+ pattern vocabulary with grid editor</li>
+            <li>Procedural level generator with 49 environment combos</li>
+            <li>FIDO, brevity terms, and domain doctrine reference</li>
+            <li>7 mission types: CAS, SAR, LE, Wildfire, HEMS, Ag, Disaster</li>
+          </ul>
+        </div>
+
+        <div class="product-card">
+          <h3>Stall / Spin &amp; VMC Dynamics</h3>
+          <p class="product-tagline">Interactive aerodynamic trainer.</p>
+          <ul class="feature-list feature-list-compact">
+            <li>110+ aircraft with real aerodynamic data</li>
+            <li>5 scenarios: Base-to-Final, Departure Stall, Accelerated, VMC/OEI</li>
+            <li>Dynamic VMC with dead engine selection and prop condition</li>
+            <li>Real-time wing AOA visualization, CL curve, and energy state</li>
+          </ul>
+        </div>
+
+        <div class="product-card">
+          <h3>Landing Lab</h3>
+          <p class="product-tagline">Interactive glideslope angle trainer.</p>
+          <ul class="feature-list feature-list-compact">
+            <li>PAPI, VASI, IFLOLS, and ILS reference systems</li>
+            <li>15 aircraft with realistic approach profiles</li>
+            <li>Toggleable visual aids: flight path, pitch ladder, angle readout</li>
+            <li>Configurable wind, angle, distance, and sensitivity</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: var(--spacing-xl);">
+        <a href="https://aeroedge-logbook.web.app" target="_blank" class="btn btn-primary btn-lg">Access Training Tools in the Logbook</a>
       </div>
     </div>
   </section>
@@ -528,10 +808,10 @@
         </div>
 
         <div class="footer-links">
-          <h4>Tools</h4>
+          <h4>Training</h4>
           <ul>
-            <li><a href="tools/em-diagram.html">EM Diagram</a></li>
-            <li><a href="tools/maneuver-overlay.html">Maneuver Overlay</a></li>
+            <li><a href="#training-tools">Training Tools</a></li>
+            <li><a href="products/logbook.html">Logbook Features</a></li>
           </ul>
         </div>
 
