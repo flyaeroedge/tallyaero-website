@@ -5,11 +5,11 @@
 
 ## 1. Overview
 
-The AeroEdge website (`aeroedge_website/`) is a static HTML/CSS site hosted on GitHub Pages at `flyaeroedge.com`. It serves as the marketing and information hub for the AeroEdge ecosystem.
+The AeroEdge website (`aeroedge_website/`) is a static HTML/CSS site hosted on GitHub Pages at `tallyaero.com`. It serves as the marketing and information hub for the AeroEdge ecosystem.
 
 **Repository:** `gherkin-aviation/aeroedge-website`
 **Hosting:** GitHub Pages
-**Domain:** flyaeroedge.com
+**Domain:** tallyaero.com
 
 ---
 
@@ -132,8 +132,8 @@ All pages share a consistent navigation structure:
 ### CTA Buttons
 
 Two primary call-to-action buttons in nav:
-- "Try EM Diagram" → https://app.flyaeroedge.com
-- "Try Overlay Tool" → https://overlay.flyaeroedge.com
+- "Try EM Diagram" → https://app.tallyaero.com
+- "Try Overlay Tool" → https://overlay.tallyaero.com
 
 ---
 
@@ -200,7 +200,7 @@ Sections:
 
 **Bug Reports:**
 - Note about error reporting links in EM Diagram and Overlay Tool nav bars
-- Email: info@flyaeroedge.com
+- Email: info@tallyaero.com
 
 ---
 

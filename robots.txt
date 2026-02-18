@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /videos/*.mov
 
-Sitemap: https://flyaeroedge.com/sitemap.xml
+Sitemap: https://tallyaero.com/sitemap.xml

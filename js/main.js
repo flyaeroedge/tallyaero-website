@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var mailBody = encodeURIComponent(
           'Name: ' + data.name + '\nEmail: ' + data.email + '\n\n' + data.message
         );
-        window.location.href = 'mailto:info@flyaeroedge.com?subject=' + mailSubject + '&body=' + mailBody;
+        window.location.href = 'mailto:info@tallyaero.com?subject=' + mailSubject + '&body=' + mailBody;
         showContactMessage('Opening your email client as a fallback...', 'error');
         submitButton.textContent = originalText;
         submitButton.disabled = false;
