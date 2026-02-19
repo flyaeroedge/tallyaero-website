@@ -189,7 +189,7 @@ a:hover {
   align-items: center;
   max-width: 100%;
   margin: 0 auto;
-  padding: var(--spacing-xs) var(--spacing-md);
+  padding: 4px var(--spacing-md);
 }
 
 /* Logo Banner - Full width, centered */
@@ -198,7 +198,7 @@ a:hover {
   display: flex;
   justify-content: center;
   background-color: var(--navy-bg);
-  padding: var(--spacing-sm) 0;
+  padding: 2px 0;
 }
 
 .logo {
@@ -217,6 +217,18 @@ a:hover {
 }
 .logo-text-link:hover {
   text-decoration: none;
+}
+/* Image-based logo */
+.logo-img {
+  height: 80px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .logo-img {
+    height: 56px;
+  }
 }
 .logo-wordmark {
   font-family: 'Inter', Arial, Helvetica, sans-serif;
