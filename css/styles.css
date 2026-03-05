@@ -6,10 +6,10 @@
 /* ---------- CSS Variables ---------- */
 :root {
   /* Primary Colors */
-  --orange-primary: #E65C00;
-  --orange-dark: #CC4A00;
-  --blue-primary: #2980B9;
-  --blue-dark: #1a5276;
+  --orange-primary: #ed8936;
+  --orange-dark: #dd6b20;
+  --blue-primary: #3182ce;
+  --blue-dark: #2b6cb0;
 
   /* Backgrounds - matches logo banner exactly */
   --navy-bg: #0B1120;
@@ -23,13 +23,13 @@
   --text-light: #f7fafc;
   --text-dark: #1a202c;
   --text-muted: #a0aec0;
-  --text-heading: #1a5276;
+  --text-heading: #2b6cb0;
 
   /* Borders & Accents */
   --gray-border: #d0d6e1;
   --warning-bg: #fff3cd;
   --warning-text: #856404;
-  --success-green: #28a745;
+  --success-green: #48bb78;
 
   /* Shadows */
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -238,13 +238,13 @@ a:hover {
   line-height: 1;
 }
 .logo-wordmark .aero {
-  background: linear-gradient(180deg, #5DA8E8 0%, #2980B9 40%, #1a5a8a 100%);
+  background: linear-gradient(180deg, #63b3ed 0%, #3182ce 40%, #2b6cb0 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 .logo-wordmark .edge {
-  background: linear-gradient(180deg, #FF8533 0%, #E65C00 40%, #b34700 100%);
+  background: linear-gradient(180deg, #f6ad55 0%, #ed8936 40%, #dd6b20 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1067,24 +1067,145 @@ a:hover {
 
 /* ---------- Animations ---------- */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes shimmer {
+  from { background-position: -200% 0; }
+  to { background-position: 200% 0; }
+}
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+@keyframes float-drift {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(10px, -15px); }
+  50% { transform: translate(-5px, -25px); }
+  75% { transform: translate(-15px, -10px); }
+}
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(237, 137, 54, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(237, 137, 54, 0.6); }
+}
+@keyframes draw-line {
+  from { stroke-dashoffset: 1000; }
+  to { stroke-dashoffset: 0; }
+}
+@keyframes dot-travel {
+  0% { offset-distance: 0%; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { offset-distance: 100%; opacity: 0; }
 }
 
 .animate-fade-in {
   animation: fadeInUp 0.6s ease forwards;
 }
+.animate-fade-in-up { animation: fadeInUp 0.5s ease-out both; }
+.animate-scale-in { animation: scaleIn 0.4s ease-out both; }
+.animate-slide-in-right { animation: slideInRight 0.5s ease-out both; }
+.animate-slide-in-left { animation: slideInLeft 0.5s ease-out both; }
 
 .animate-delay-1 { animation-delay: 0.1s; }
 .animate-delay-2 { animation-delay: 0.2s; }
 .animate-delay-3 { animation-delay: 0.3s; }
 .animate-delay-4 { animation-delay: 0.4s; }
+.animate-delay-5 { animation-delay: 0.5s; }
+.animate-delay-6 { animation-delay: 0.6s; }
+
+/* GSAP setup — hidden until animated */
+.gs-hidden { opacity: 0; }
+.gs-from-left { opacity: 0; transform: translateX(-40px); }
+.gs-from-right { opacity: 0; transform: translateX(40px); }
+
+/* Floating background orbs */
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.15;
+  animation: float-drift 20s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* 3D Tilt cards */
+.tilt-card {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.15s ease-out;
+}
+.tilt-card .tilt-glare {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+.tilt-card:hover .tilt-glare { opacity: 1; }
+
+/* Floating nav — glass effect on scroll */
+.header.scrolled {
+  background-color: rgba(11, 17, 32, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.header.scrolled .logo-wordmark {
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+/* Button micro-interactions */
+.btn-press { transition: transform 0.1s; }
+.btn-press:active { transform: scale(0.97); }
+
+/* CTA glow */
+.btn-glow { animation: glow-pulse 2s ease-in-out infinite; }
+
+/* Ecosystem diagram animated lines */
+.eco-line {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+.eco-line.animated { animation: draw-line 1.5s ease-out forwards; }
+.eco-dot {
+  animation: dot-travel 3s linear infinite;
+}
+
+/* Bar chart grow animation */
+.chart-bar-grow {
+  transform-origin: bottom;
+  animation: scaleIn 0.6s ease-out both;
+}
+
+/* Stroke draw animation for line charts */
+.chart-line-draw {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: draw-line 1.5s ease-out forwards;
+}
 
 /* ---------- Scroll Indicator ---------- */
 .scroll-indicator {
@@ -1636,7 +1757,7 @@ a:hover {
   justify-content: center;
   width: 28px;
   height: 28px;
-  background: #28a745;
+  background: #48bb78;
   border-radius: 50%;
   color: white;
   font-size: 16px;
@@ -2740,4 +2861,14 @@ fieldset.beta-form-group legend {
   background: rgba(220, 53, 69, 0.15);
   color: #dc3545;
   border: 1px solid rgba(220, 53, 69, 0.3);
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  .hero-orb { display: none; }
+  .eco-dot { display: none; }
 }

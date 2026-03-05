@@ -39,6 +39,16 @@
       text-align: center;
       background-color: var(--navy-bg);
       border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+    }
+
+    .blackout-header.scrolled {
+      background-color: rgba(11, 17, 32, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
     }
 
     .blackout-header .logo-wordmark {
@@ -242,32 +252,42 @@
     </div>
     <div class="hero-overlay"></div>
 
-    <div class="blackout-hero-content">
-      <h1>Something <span class="accent">New</span> Is Taking Shape</h1>
-      <p>AeroEdge is becoming TallyAero. Same team. Same mission. Bigger vision.</p>
+    <!-- Floating gradient orbs -->
+    <div class="hero-orb" style="width:300px;height:300px;background:radial-gradient(circle,rgba(49,130,206,0.3),transparent);top:10%;left:15%;animation-delay:0s;"></div>
+    <div class="hero-orb" style="width:200px;height:200px;background:radial-gradient(circle,rgba(237,137,54,0.25),transparent);top:60%;right:10%;animation-delay:-7s;"></div>
+    <div class="hero-orb" style="width:250px;height:250px;background:radial-gradient(circle,rgba(72,187,120,0.2),transparent);bottom:10%;left:40%;animation-delay:-14s;"></div>
+
+    <div class="blackout-hero-content gs-hidden">
+      <h1 class="hero-words">Something <span class="accent">New</span> Is Taking Shape</h1>
+      <p class="hero-subtitle">AeroEdge is becoming TallyAero. Same team. Same mission. Bigger vision.</p>
     </div>
   </section>
 
   <!-- ============ PRODUCTS ============ -->
   <section class="blackout-products">
     <div class="blackout-grid">
-      <div class="blackout-card">
+      <div class="blackout-card tilt-card gs-hidden">
+        <div class="tilt-glare"></div>
         <h3>Logbook</h3>
       </div>
 
-      <div class="blackout-card">
+      <div class="blackout-card tilt-card gs-hidden">
+        <div class="tilt-glare"></div>
         <h3>DASHTWO</h3>
       </div>
 
-      <div class="blackout-card">
+      <div class="blackout-card tilt-card gs-hidden">
+        <div class="tilt-glare"></div>
         <h3>Ecosystem</h3>
       </div>
 
-      <div class="blackout-card">
+      <div class="blackout-card tilt-card gs-hidden">
+        <div class="tilt-glare"></div>
         <h3>School Management</h3>
       </div>
 
-      <div class="blackout-card">
+      <div class="blackout-card tilt-card gs-hidden">
+        <div class="tilt-glare"></div>
         <h3>Training</h3>
       </div>
     </div>
@@ -283,6 +303,11 @@
     <p><a href="/legal.html" style="color:#E65C00;text-decoration:none;">Privacy Policy & Terms</a></p>
     <p>&copy; 2026 TallyAero. All rights reserved.</p>
   </footer>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/animations.js"></script>
 
   <script>
     // Video background handling
